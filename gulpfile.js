@@ -64,7 +64,7 @@ gulp.task('email', ['images', 'less', 'jade'], function () {
 
 // Default Task
 gulp.task('default', ['images', 'jade', 'less', 'browser-sync'], function(){
-  gulp.watch("src/less/**/*.less", ['less']);
-  gulp.watch("src/jade/**/*.jade", ['jade']);
-  gulp.watch("*.html", ['bs-reload']);
+  gulp.watch("src/less/**/*.less", ['less','bs-reload']);
+  gulp.watch("src/jade/**/*.jade", ['jade','bs-reload']);
+  gulp.watch("src/dist/*.html", ['bs-reload']);
 });
