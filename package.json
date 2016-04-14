@@ -1,6 +1,6 @@
 {
   "name": "EmailBoilerplate",
-  "version": "0.2",
+  "version": "0.2.0",
   "description": "Email Boilerplate for High Achievers. Start building emails fast as possible with Jade, LessCSS and Gulp.",
   "main": "gulpfile.js",
   "scripts": {
