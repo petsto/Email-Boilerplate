@@ -1,0 +1,55 @@
+
+// Email CSS Reset
+// *
+// Using some CSS Love from Zurb Email
+// https://github.com/zurb/foundation-emails
+// *
+
+html {
+    min-height:      100%;
+}
+
+body {
+    width:           100% !important;
+    min-width:       100%;
+    margin:          0;
+    padding:         0;
+    box-sizing:      border-box;
+}
+
+img {
+    display:         block;
+    clear:           both;
+    max-width:       100%;
+    width:           auto;
+    border:          0 none;
+    height:          auto;
+    line-height:     1;
+    outline:         none;
+    text-decoration: none;
+
+        // If inside a link
+        a & {
+            // forcing no border
+            border:  0 none;
+        }
+}
+
+table, td {
+    border-collapse: collapse;
+    border-spacing:  0;
+}
+
+td {
+  word-wrap:         break-word;
+  -webkit-hyphens:   auto;
+  -moz-hyphens:      auto;
+  hyphens:           auto;
+  border-collapse:   collapse !important;
+}
+
+table, tr, td {
+  padding:           0;
+  vertical-align:    top;
+  text-align:        left;
+}

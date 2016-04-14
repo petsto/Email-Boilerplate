@@ -1,0 +1,23 @@
+{
+  "name": "EmailBoilerplate",
+  "version": "0.2",
+  "description": "Email Boilerplate for High Achievers. Start building emails fast as possible with Jade, LessCSS and Gulp.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Petar Stoyanov",
+  "devDependencies": {
+    "browser-sync": ">=2.6.5",
+    "gulp-autoprefixer": ">=2.1.0",
+    "gulp-cache": ">=0.2.8",
+    "gulp-imagemin": ">=2.2.1",
+    "gulp-less": ">=3.0.3",
+    "gulp-plumber": ">=1.0.0",
+    "gulp-rename": ">=1.2.2",
+    "gulp-uglify": ">=1.2.0",
+    "gulp-premailer": ">=0.4.0",
+    "gulp-jade": ">=1.1.0",
+    "gulp": ">=3.8.11"
+  }
+}
