@@ -2,10 +2,13 @@ doctype
 html.no-js
   head
     meta(charset='utf-8')
-    title Email Boilerplate Title here
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    block headTitle
+      title Default title
+    meta(name='viewport', content='width=device-width')
     link(rel='stylesheet', href='css/styles.css')
+
   body
 
-    //- Add your site or application content here
-    p Hello world! This is HTML5 Boilerplate.
+    table#email-container(cellpadding="0" cellspacing="0"): tr: td.container-base
+        //- Your content will be aplied here
+        block content
