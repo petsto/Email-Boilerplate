@@ -5,17 +5,26 @@
 // Reset
 // *
 
+@import '_include/variables';
 @import '_include/reset';
 
 
 // Email Styles
 // *
 
+#email-container {
+    width: @containerTable-width;
+    margin: 0 auto;
+}
+
+
+
 // Just example
 // -------
 // Once you run `gulp email` command in terminal
 // the CSS from this file will be inlined into the HTML
 // and moved to a new folder in ./dist/email/**.html
+
 p {
     font-size: 32px;
     color: red;
