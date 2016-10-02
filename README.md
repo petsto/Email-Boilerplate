@@ -1,11 +1,11 @@
 # Email Boilerplate
 
-HTML Email Boilerplate is a base structure for starting building email templates with pre-configured gulp packages and some starting templates. The idea behind this small repo is to maintain it and update it with better and constantly imrpoving techniques.
+Email Boilerplate is a base structure for starting building email templates with pre-configured gulp packages and some starting templates. The idea behind this small repo is to maintain it and update it with better techniques.
 
 ### Features
   - Pug Template Engine
   - Stylus
-  - Images optimisation
+  - Images optimization
   - Inlining CSS into HTML
   - Generating Email and Web (default) version
 
