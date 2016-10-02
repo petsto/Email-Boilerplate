@@ -8,7 +8,7 @@ var gulp     = require('gulp'),
     imagemin     = require('gulp-imagemin'),
     cache        = require('gulp-cache'),
     stylus       = require('gulp-stylus'),
-    jade         = require('gulp-jade'),
+    pug          = require('gulp-pug'),
     clean        = require('gulp-clean'),
     premailer    = require('gulp-premailer'),
     browserSync  = require('browser-sync');
@@ -45,11 +45,11 @@ gulp.task('images', function(){
 });
 
 
-// Convert Jade to HTML
+// Convert Pug to HTML
 // ----------
-gulp.task('jade', function(){
-    gulp.src('src/jade/**/*.jade')
-        .pipe(jade({
+gulp.task('pug', function(){
+    gulp.src('src/pug/**/*.pug')
+        .pipe(pug({
             pretty: true
         }))
         .pipe(gulp.dest('dist/'));
@@ -74,7 +74,7 @@ gulp.task('stylus', function() {
 
 // Building Email
 // ----------
-gulp.task('email', ['images', 'less', 'jade'], function () {
+gulp.task('email', ['images', 'less', 'pug'], function () {
     gulp.src('./dist/*.html')
         .pipe(premailer())
         .pipe(gulp.dest('./dist/email/'));
@@ -83,9 +83,9 @@ gulp.task('email', ['images', 'less', 'jade'], function () {
 
 // Default Task
 // ----------
-gulp.task('default', ['images', 'jade', 'stylus', 'browser-sync'], function(){
+gulp.task('default', ['images', 'pug', 'stylus', 'browser-sync'], function(){
     gulp.watch("src/stylus/**/*.styl", ['less','bs-reload']);
-    gulp.watch("src/jade/**/*.jade", ['jade','bs-reload']);
+    gulp.watch("src/pug/**/*.pug", ['pug','bs-reload']);
     gulp.watch("src/dist/*.html", ['bs-reload']);
 });
 
