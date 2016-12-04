@@ -45,10 +45,10 @@ gulp.task('images', function(){
 });
 
 
-// Convert Pug to HTML
+// Convert Pug to HTML Templates
 // ----------
-gulp.task('pug', function(){
-    gulp.src('src/pug/**/*.pug')
+gulp.task('templates', function(){
+    gulp.src('src/templates/*.pug')
         .pipe(pug({
             pretty: true
         }))
@@ -74,7 +74,7 @@ gulp.task('stylus', function() {
 
 // Building Email
 // ----------
-gulp.task('email', ['images', 'less', 'pug'], function () {
+gulp.task('email', ['images', 'stylus', 'templates'], function () {
     gulp.src('./dist/*.html')
         .pipe(premailer())
         .pipe(gulp.dest('./dist/email/'));
@@ -83,9 +83,9 @@ gulp.task('email', ['images', 'less', 'pug'], function () {
 
 // Default Task
 // ----------
-gulp.task('default', ['images', 'pug', 'stylus', 'browser-sync'], function(){
-    gulp.watch("src/stylus/**/*.styl", ['less','bs-reload']);
-    gulp.watch("src/pug/**/*.pug", ['pug','bs-reload']);
+gulp.task('default', ['images', 'templates', 'stylus', 'browser-sync'], function(){
+    gulp.watch("src/stylus/**/*.styl", ['stylus','bs-reload']);
+    gulp.watch("src/templates/**/*.pug", ['templates','bs-reload']);
     gulp.watch("src/dist/*.html", ['bs-reload']);
 });
 
