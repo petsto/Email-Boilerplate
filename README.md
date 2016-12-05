@@ -4,38 +4,53 @@ Email Boilerplate is a base structure for starting building email templates with
 
 ### Features
   - Pug Template Engine
-  - Stylus
+  - Stylus for CSS awesomeness
   - Images optimization
   - Inlining CSS into HTML
-  - Generating Email and Web (default) version
+  - Working environment
+  - Build final email command.
 
-### Installation
-Copy the repo
+## Installation & Requirements
+##### Copy this repo
+You can do this true Terminal if you have Github setup locally. True your Github Desktop app or just [download as a .zip file](https://github.com/petsto/Email-Boilerplate/archive/master.zip).
 ```sh
 $ git clone https://github.com/petsto/Email-Boilerplate.git
 ```
-Install Node.js packages
-```sh
+
+##### Install Node.js packages
+For proper development with this Boilerplate, you'll need to have Node.js installed on your computer. Node is compatible with Windows, OS X, and Linux. [Visit Node.js website for installation](https://nodejs.org/en/)
+```
 $ npm install
 ```
 
-Main commands
-```sh
+##### Main commands
+Now, once you have all the things installed, here are the base commands you can use with this Boilerplate (at least for now):
+```
 $ gulp
-- optimize images, pug templates complile, stylus complile, browser sync
-$ gulp email
-- inlining css and building html file in ./dist/email/
-$ gulp pug
-- only compiles .pug to .html
-$ gulp less
-- only compiles .styl to .css
+-- optimize images, pug templates compile, stylus compile, browser sync
+$ gulp templates
+-- only compiles .pug to .html
+$ gulp stylus
+-- only compiles .styl to .css
 $ gulp images
-- only optimizing images
+-- only optimizing images
 $ gulp clean
-- removes ./dist/ folder
+-- deletes ./dist/ folder
+$ gulp email
+-- inlining css and building email pages in ./dist/email/
 ```
 
-#### Things to-do
-  - Templates
-  - Proper testing and integration with Litmus
+#### Roadmap
+  - ~~Proper Templates folder structures~~
+  - Mixins for faster structure builds
+  - Components for different type of elements
+  - Email Templates
+  - * Basic
+  - * Basic + Sidebar
+  - * Invitation
+  - * Password Reset
+  - * Newsletter
+  - * Cards with images
+  - Testing Templates for compatibility
+  - Integration with Litmus ( if possible )
   - Free testing via Putsmail
